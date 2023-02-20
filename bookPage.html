@@ -164,17 +164,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 text-center">
-                    <form action="reservation.php" method="post">
+                    <form method="POST" type="submit" name="myEnquiry">
+
 
                         <div class="elem-group inlined">
                             <label for="name">First Name</label>
-                            <input type="text" id="name" name="visitor_name" placeholder="First Name"
+                            <input type="text" id="name" name="visitor_fname" placeholder="First Name"
                                 pattern=[A-Z\sa-z]{3,20} required>
                         </div>
 
                         <div class="elem-group inlined">
                             <label for="name">Last Name</label>
-                            <input type="text" id="name" name="visitor_name" placeholder="Last Name"
+                            <input type="text" id="name" name="visitor_lname" placeholder="Last Name"
                                 pattern=[A-Z\sa-z]{3,20} required>
                         </div>
 
@@ -231,9 +232,25 @@
                                 placeholder="Tell us anything else that might be important." required></textarea>
                         </div>
                         <!-- <button type="submit" class="button-89">Book Your Stay</button> -->
-                        <a href="bookPage.html" type="submit" class="button-89">BOOKING NOW</a>
-
+                        <!-- <a href="bookPage.html" type="submit" class="button-89">BOOKING NOW</a> -->
+                        <button type="submit">Send</button>
                     </form>
+
+
+
+                    <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbyX3-iw7mTVPfLtWwDICrBOZ4mh0b4t6QbocKDVXTm_KNUBoVAsQ9vDT-EwUdbhR1wa/exec'
+                        const form = document.forms['myEnquiry']
+
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                            .catch(error => console.error('Error!', error.message))
+
+                            e.target.reset();
+                        })
+                      </script>
 
                 </div>
 
