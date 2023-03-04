@@ -60,8 +60,7 @@
                 <li><a href="./sites.html">OUR SITES</a></li>
                 <li><a href="./about-us.html">ABOUT US</a></li>
                 <li><a href="./gallery.html">GALLERY</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
+ <!-- <li><a href="./blog.html">BLOG</a></li> -->                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -95,8 +94,7 @@
                             <div class="top-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
+ <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i class="fa fa-instagram"></i></a>                            </div>
                             <a href="./sites.html" class="bk-btn">Booking Now</a>
 
                         </div>
@@ -125,8 +123,7 @@
                                     <li><a href="./sites.html">OUR SITES</a></li>
                                     <li><a href="./about-us.html">ABOUT US</a></li>
                                     <li><a href="./gallery.html">GALLERY</a></li>
-                                    <li><a href="./blog.html">BLOG</a></li>
-                                    <li><a href="./contact.html">CONTACT</a></li>
+                     <!-- <li><a href="./blog.html">BLOG</a></li> -->                                    <li><a href="./contact.html">CONTACT</a></li>
                                 </ul>
                             </nav>
                             <!-- <div class="nav-right search-switch">
@@ -346,89 +343,126 @@
 
                     <div class="review-add">
                         <h4>Add Review</h4>
-                        <form action="#" class="ra-form">
+                        <form class="ra-form" method="POST" name="reviews" action="https://script.google.com/macros/s/AKfycbweLKAc45IkSLCtL_lSzFm6g5tR_x8sUVCq9T-Aoo8pc8dwZIq3oHws7RwBiglBz1ww-g/exec">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*">
+                                    <input type="text" name="name" placeholder="Name*">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*">
+                                    <input type="number" name="phone" placeholder="Phone">
                                 </div>
                                 <div class="col-lg-12">
-                                    <div>
+                                    <!-- <div>
                                         <h5>You Rating:</h5>
-                                        <div class="rating">
+                                        <div class="rating" name="review">
                                             <i class="icon_star"></i>
                                             <i class="icon_star"></i>
                                             <i class="icon_star"></i>
                                             <i class="icon_star"></i>
                                             <i class="icon_star-half_alt"></i>
                                         </div>
-                                    </div>
-                                    <textarea placeholder="Your Review"></textarea>
+                                    </div> -->
+                                    <textarea placeholder="Your Review" name="customerReview"></textarea>
                                     <button type="submit">Submit Now</button>
                                 </div>
                             </div>
                         </form>
+
+
+                        <script>
+                            const scriptURLR = 'https://script.google.com/macros/s/AKfycbweLKAc45IkSLCtL_lSzFm6g5tR_x8sUVCq9T-Aoo8pc8dwZIq3oHws7RwBiglBz1ww-g/exec'
+                            const formR = document.forms['reviews']
+
+                            formR.addEventListener('submit', e => {
+                                e.preventDefault()
+                                fetch(scriptURLR, { method: 'POST', body: new FormData(formR) })
+                                    .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                                    .catch(error => console.error('Error!', error.message))
+
+                                e.target.reset();
+                            })
+                        </script>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="room-booking text-center">
                         <h3>BOOK YOUR STAY</h3>
-                        <form action="#" class="text-center">
 
-                            <div class="select-option">
-                                <label for="guest">Adults: 2500₹ /Per Person </label>
-                                <!-- <input id="guest" type="number" value=""> -->
-                                <select id="guest">
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                        <form name="myEnquiry" method="POST" action="https://script.google.com/macros/s/AKfycbwgdb2n9jwBpXKZHL7u0U9Vnbn72-y46Sj7kPc7_sGq5-KPawjyP7dU9cQg3QGozIVR/exec">
 
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Childrens:800₹ /Per Person</label>
-                                <select id="room">
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                </select>
+
+                            <input type = "hidden" name = "camping" value = "NirwanaStays" />
+
+                            <div class="text-white">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="visitor_fname" placeholder="First Name"
+                                    pattern=[A-Z\sa-z]{3,20} required>
                             </div>
 
-                            <div class="check-date">
-                                <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
+                            <div class="text-white mt-2 ">
+                                <label for="name">Last Name</label>
+                                <input type="text" id="name" name="visitor_lname" placeholder="Last Name"
+                                    pattern=[A-Z\sa-z]{3,20} required>
                             </div>
 
-                            <!--
-                            <div class="select-option">
-                                <label for="room">Food :</label>
-                                <select id="room">
-                                    <option value="">Veg</option>
-                                    <option value="">Non-Veg</option>
+                            <div class="text-white mt-2 ">
+                                <label for="phone">Your Phone</label>
+                                <input type="tel" id="phone" name="visitor_phone" placeholder="WhatsApp Number"
+                                    pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                            </div>
 
-                                </select>
-                            </div> -->
+                            <hr>
+                            <div class="text-white mt-2 ">
+                                <label for="adult">Adults</label>
+                                <input type="number" id="adult" name="total_adults" placeholder="" min="1" required>
+                            </div>
+                            <div class="text-white mt-2 ">
+                                <label for="child">Children</label>
+                                <input type="number" id="child" name="total_children" placeholder="" min="0" required>
+                            </div>
+
+
+                            <div class="text-white mt-2 ">
+                                <label for="checkin-date">Check-in Date</label>
+                                <input type="date" id="checkin-date" name="checkin" required>
+                            </div>
+                            <div class="text-white mt-2 ">
+                                <label for="checkout-date">Check-out Date</label>
+                                <input type="date" id="checkout-date" name="checkout" required>
+                            </div>
+
+                            <!-- <hr> -->
+                            <div class="text-white mt-2 elem-group">
+                                <label for="message">Anything Else?</label>
+                                <textarea id="message" name="visitor_message"
+                                    placeholder="Tell us anything else that might be important." required></textarea>
+                            </div>
+
                             <div class="mt-5">
-                                <a href="bookPage.html" class="button-90">BOOKING NOW</a>
+                                <!-- <a href="" type="submit" class="button-90">BOOKING NOW</a> -->
+                                <!-- <a href="" type="submit" class="button-89">BOOK NOW</a> -->
+                                <button type="submit" class="button-90 bg-white">Book Now</button>
+
 
                             </div>
 
                         </form>
+
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbwgdb2n9jwBpXKZHL7u0U9Vnbn72-y46Sj7kPc7_sGq5-KPawjyP7dU9cQg3QGozIVR/exec'
+                            const form = document.forms['myEnquiry']
+
+                            form.addEventListener('submit', e => {
+                                e.preventDefault()
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                    .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                                    .catch(error => console.error('Error!', error.message))
+
+                                e.target.reset();
+                            })
+                        </script>
+
                     </div>
 
                     <br><br>
@@ -532,8 +566,7 @@
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+ <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i class="fa fa-instagram"></i></a>                                <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -567,7 +600,7 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <ul>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                             <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Privacy</a></li>
                             <li><a href="#">Environmental Policy</a></li>

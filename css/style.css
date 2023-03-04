@@ -574,7 +574,7 @@ ol {
 .hero-section {
 	position: relative;
 	padding-top: 180px;
-	padding-bottom: 100px;
+	padding-bottom: 240px;
 }
 .hero-section .container {
 	position: relative;
@@ -1209,9 +1209,11 @@ ol {
 /*---------------------
   Footer Section
 -----------------------*/
-
+.lable {
+	color: white;
+}
 .footer-section {
-	background: #000000;
+	background: #050a19;
 }
 
 .footer-section .footer-text {

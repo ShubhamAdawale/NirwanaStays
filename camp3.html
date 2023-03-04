@@ -59,8 +59,7 @@
                 <li><a href="./sites.html">OUR SITES</a></li>
                 <li><a href="./about-us.html">ABOUT US</a></li>
                 <li><a href="./gallery.html">GALLERY</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
+ <!-- <li><a href="./blog.html">BLOG</a></li> -->                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -94,8 +93,7 @@
                             <div class="top-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
+ <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i class="fa fa-instagram"></i></a>                            </div>
                             <a href="./sites.html" class="bk-btn">Booking Now</a>
 
                         </div>
@@ -124,8 +122,7 @@
                                     <li><a href="./sites.html">OUR SITES</a></li>
                                     <li><a href="./about-us.html">ABOUT US</a></li>
                                     <li><a href="./gallery.html">GALLERY</a></li>
-                                    <li><a href="./blog.html">BLOG</a></li>
-                                    <li><a href="./contact.html">CONTACT</a></li>
+                     <!-- <li><a href="./blog.html">BLOG</a></li> -->                                    <li><a href="./contact.html">CONTACT</a></li>
                                 </ul>
                             </nav>
                             <!-- <div class="nav-right search-switch">
@@ -194,7 +191,7 @@
                                         <i class="icon_star-half_alt"></i>
                                     </div>
 
-                                    <a href="bookPage.html" class="button-89">BOOKING NOW</a>
+                                    <!-- <a href="bookPage.html" class="button-89">BOOKING NOW</a> -->
                                 </div>
                             </div>
                             <h2>₹3999 to ₹4999 <span>per cottage (offer)</span></h2>
@@ -359,62 +356,87 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                       <div class="room-booking text-center">
+
+
+          <div class="col-lg-4">
+                    <div class="room-booking text-center">
                         <h3>BOOK YOUR STAY</h3>
-                        <form action="#" class="text-center">
 
-                            <div class="select-option">
-                                <label for="guest">Adults: 2500₹ /Per Person </label>
-                                <!-- <input id="guest" type="number" value=""> -->
-                                <select id="guest">
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                        <form name="myEnquiry" method="POST"
+                            action="https://script.google.com/macros/s/AKfycbwgdb2n9jwBpXKZHL7u0U9Vnbn72-y46Sj7kPc7_sGq5-KPawjyP7dU9cQg3QGozIVR/exec">
 
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Childrens:800₹ /Per Person</label>
-                                <select id="room">
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                </select>
+
+                            <input type="hidden" name="camping" value="Cottages" />
+
+                            <div class="text-white">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="visitor_fname" placeholder="First Name"
+                                    pattern=[A-Z\sa-z]{3,20} required>
                             </div>
 
-                            <div class="check-date">
-                                <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
+                            <div class="text-white mt-2 ">
+                                <label for="name">Last Name</label>
+                                <input type="text" id="name" name="visitor_lname" placeholder="Last Name"
+                                    pattern=[A-Z\sa-z]{3,20} required>
                             </div>
 
-                            <!--
-                            <div class="select-option">
-                                <label for="room">Food :</label>
-                                <select id="room">
-                                    <option value="">Veg</option>
-                                    <option value="">Non-Veg</option>
+                            <div class="text-white mt-2 ">
+                                <label for="phone">Your Phone</label>
+                                <input type="tel" id="phone" name="visitor_phone" placeholder="WhatsApp Number"
+                                    pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                            </div>
 
-                                </select>
-                            </div> -->
+                            <hr>
+                            <div class="text-white mt-2 ">
+                                <label for="adult">Adults</label>
+                                <input type="number" id="adult" name="total_adults" placeholder="" min="1" required>
+                            </div>
+                            <div class="text-white mt-2 ">
+                                <label for="child">Children</label>
+                                <input type="number" id="child" name="total_children" placeholder="" min="0" required>
+                            </div>
+
+
+                            <div class="text-white mt-2 ">
+                                <label for="checkin-date">Check-in Date</label>
+                                <input type="date" id="checkin-date" name="checkin" required>
+                            </div>
+                            <div class="text-white mt-2 ">
+                                <label for="checkout-date">Check-out Date</label>
+                                <input type="date" id="checkout-date" name="checkout" required>
+                            </div>
+
+                            <!-- <hr> -->
+                            <div class="text-white mt-2 elem-group">
+                                <label for="message">Anything Else?</label>
+                                <textarea id="message" name="visitor_message"
+                                    placeholder="Tell us anything else that might be important." required></textarea>
+                            </div>
+
                             <div class="mt-5">
-                                <a href="bookPage.html" class="button-90">BOOKING NOW</a>
+                                <!-- <a href="" type="submit" class="button-90">BOOKING NOW</a> -->
+                                <!-- <a href="" type="submit" class="button-89">BOOK NOW</a> -->
+                                <button type="submit" class="button-90 bg-white">Book Now</button>
+
 
                             </div>
 
                         </form>
+
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbwgdb2n9jwBpXKZHL7u0U9Vnbn72-y46Sj7kPc7_sGq5-KPawjyP7dU9cQg3QGozIVR/exec'
+                            const form = document.forms['myEnquiry']
+
+                            form.addEventListener('submit', e => {
+                                e.preventDefault()
+                                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                    .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                                    .catch(error => console.error('Error!', error.message))
+
+                                e.target.reset();
+                            })
+                        </script>
+
                     </div>
 
                     <br><br>
@@ -442,49 +464,49 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Enjoy Sunset</th>
+                                        Enjoy Sunset</th>
                                     <td>6:30 pm</td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">
-                                       Games</th>
+                                        Games</th>
                                     <td>4:30 pm</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Delicious BBQ</th>
+                                        Delicious BBQ</th>
                                     <td>7:30 pm</td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">
-                                       Music</th>
+                                        Music</th>
                                     <td>8:00 pm</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Unlimited Dinner</th>
+                                        Unlimited Dinner</th>
                                     <td>9:30 pm</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Campifire</th>
+                                        Campifire</th>
                                     <td>10:30 pm</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                      Sleep in tent</th>
+                                        Sleep in tent</th>
                                     <td>--</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Photo Session</th>
+                                        Photo Session</th>
                                     <td>9:00 AM</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                       Check Out</th>
+                                        Check Out</th>
                                     <td>11:00 AM</td>
                                 </tr>
 
@@ -518,8 +540,7 @@
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+ <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i class="fa fa-instagram"></i></a>                                <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -553,7 +574,7 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <ul>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                             <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Privacy</a></li>
                             <li><a href="#">Environmental Policy</a></li>

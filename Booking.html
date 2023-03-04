@@ -159,7 +159,7 @@
     <!-- Room Details Section Begin -->
     <section class="room-details-section spad">
         <div class="container">
-            <div class="row d-flex justify-content-center p-4" style="background-color:#9eabd1; border-radius: 20px;">
+            <div class="row">
                 <div class="col-lg-7 text-center">
                     <form method="POST" type="submit" name="myEnquiry">
 
@@ -240,22 +240,20 @@
                         const form = document.forms['myEnquiry']
 
                         form.addEventListener('submit', e => {
-                            e.preventDefault()
-                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                                .catch(error => console.error('Error!', error.message))
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                            .catch(error => console.error('Error!', error.message))
 
                             e.target.reset();
                         })
-                    </script>
+                      </script>
 
                 </div>
 
-                <!-- <div class="col-lg-5">
-                    <div >
+                <div class="col-lg-5">
 
-                    </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -271,8 +269,8 @@
                         <div class="ft-about">
 
                             <div class="logo">
-                                <a class="section-title" style="font-size: 2rem; font-weight: 800; " href="#">NIRWANA
-                                    STAYS
+                                <a class="section-title" style="font-size: 2rem; font-weight: 800; "
+                                    href="#">NIRWANA STAYS
                                 </a>
                             </div>
                             <p>Nature is Calling, <br> Answer with a Camping Stay</p>

@@ -27,7 +27,7 @@
 </head>
 
 <body>
-       <!-- Page Preloder -->
+    <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -37,7 +37,7 @@
         document.addEventListener("DOMContentLoaded", function () { var t = document.querySelector(".vanillatop"); function e(n) { var o = window.pageYOffset, a = Math.floor(Date.now()); !function t() { Math.easeInOutQuad = function (t) { return t < .5 ? 2 * t * t : (4 - 2 * t) * t - 1 }; var e = Math.min(1, (Math.floor(Date.now()) - a) / n); window.scroll(0, Math.ceil(Math.easeInOutQuad(e) * (0 - o) + o)), 0 === window.pageYOffset && callback(), requestAnimationFrame(t) }() } t.addEventListener("click", function () { window.requestAnimationFrame ? e(700) : window.scrollTo(0, 0) }), window.addEventListener("scroll", function () { 280 < document.body.scrollTop || 280 < document.documentElement.scrollTop ? (t.removeAttribute("style", "transform: translateX(120px);"), t.setAttribute("style", "transform: translateX(0);")) : (t.removeAttribute("style", "transform: translateX(0);"), t.setAttribute("style", "transform: translateX(120px);")) }) });
     </script>
 
-      <!-- Offcanvas Menu Section Begin -->
+    <!-- Offcanvas Menu Section Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="canvas-open">
         <i class="icon_menu "></i>
@@ -60,7 +60,7 @@
                 <li><a href="./sites.html">OUR SITES</a></li>
                 <li><a href="./about-us.html">ABOUT US</a></li>
                 <li><a href="./gallery.html">GALLERY</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
+                <!-- <li><a href="./blog.html">BLOG</a></li> -->
                 <li><a href="./contact.html">CONTACT</a></li>
             </ul>
         </nav>
@@ -73,7 +73,7 @@
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
         <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> +91 90214 08308 </li>
+            <i class="fa fa-phone"><a href="tel:+918485834885">+91 90214 08308 </a></i> </li>
             <li><i class="fa fa-envelope"></i> contact@nirwanastays.com</li>
         </ul>
     </div>
@@ -95,7 +95,8 @@
                             <div class="top-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i
+                                        class="fa fa-instagram"></i></a>
                             </div>
                             <a href="./sites.html" class="bk-btn">Booking Now</a>
 
@@ -125,7 +126,7 @@
                                     <li><a href="./sites.html">OUR SITES</a></li>
                                     <li><a href="./about-us.html">ABOUT US</a></li>
                                     <li><a href="./gallery.html">GALLERY</a></li>
-                                    <li><a href="./blog.html">BLOG</a></li>
+                                    <!-- <li><a href="./blog.html">BLOG</a></li> -->
                                     <li><a href="./contact.html">CONTACT</a></li>
                                 </ul>
                             </nav>
@@ -213,8 +214,8 @@
     </section>
     <!-- About Us Page Section End -->
 
-      <!-- Home Room Section Begin -->
-      <section class="hp-room-section">
+    <!-- Home Room Section Begin -->
+    <section class="hp-room-section">
         <div class="container-fluid">
             <div class="hp-room-items">
                 <div class="row">
@@ -238,7 +239,7 @@
                         <div class="hp-room-item set-bg" data-setbg="img/Pawana/camping/Croud.jpg">
                             <div class="hr-text">
                                 <h3>CAMPING</h3>
-                          <a href="./camping.html" class="button-90">EXPLORE</a>
+                                <a href="./camping.html" class="button-90">EXPLORE</a>
                             </div>
                         </div>
                     </div>
@@ -353,8 +354,8 @@
                         <div class="ft-about">
 
                             <div class="logo">
-                                <a class="section-title" style="font-size: 2rem; font-weight: 800; color: rgb(255, 255, 255);"
-                                    href="#">NIRWANA STAYS
+                                <a class="section-title" style="font-size: 2rem; font-weight: 800;" href="#">NIRWANA
+                                    STAYS
                                 </a>
                             </div>
                             <p>Nature is Calling, <br> Answer with a Camping Stay</p>
@@ -362,8 +363,9 @@
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://www.instagram.com/nirwanastays/" target="_blank"><i
+                                        class="fa fa-instagram"></i></a> <a href="#"><i
+                                        class="fa fa-youtube-play"></i></a>
                             </div>
                         </div>
                     </div>
@@ -397,7 +399,7 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <ul>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
                             <li><a href="#">Terms of use</a></li>
                             <li><a href="#">Privacy</a></li>
                             <li><a href="#">Environmental Policy</a></li>
