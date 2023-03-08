@@ -162,7 +162,7 @@ ol {
 
 /* Preloder */
 
-#preloder {
+/* #preloder {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -170,7 +170,7 @@ ol {
 	left: 0;
 	z-index: 999999;
 	background: #ffffff;
-}
+} */
 /*
 .loader {
 	width: 40px;
@@ -1358,7 +1358,7 @@ ol {
 -----------------------*/
 
 .breadcrumb-section {
-	padding-top: 70px;
+	/* padding-top: 70px; */
 	padding-bottom: 80px;
 }
 
@@ -3478,8 +3478,8 @@ div.elem-group {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	top: 25vw;
-	left: 50vw;
+	top: 35vw;
+	left: 47%;
 	z-index: 999999;
 	background-color: #a1000000;
 }
