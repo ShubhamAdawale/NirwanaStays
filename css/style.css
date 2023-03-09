@@ -1043,14 +1043,15 @@ ol {
 -------------------------*/
 
 .hp-room-items {
-	margin-left: -15px;
-	margin-right: -15px;
+	/* margin-left: -15px;
+	margin-right: -15px; */
 	overflow: hidden;
 }
 
 .hp-room-items .hp-room-item {
 	height: 400px;
-	margin-right: -15px;
+	/* margin-right: -15px; */
+	margin: 10px;
 	position: relative;
 	overflow: hidden;
 	background-color: #87c231;
@@ -1563,6 +1564,10 @@ ol {
 /*---------------------
   Room Section
 -----------------------*/
+
+/* .col-md-4{
+	padding: 10px;
+} */
 
 .rooms-section {
 	padding-top: 0;
