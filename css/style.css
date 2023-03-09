@@ -2,6 +2,7 @@ html,
 body {
 	height: 100%;
 	font-family: "Cabin", sans-serif;
+	/* background-image: url(/img/dayWal.jpg); */
 	/* font-family: "Lora", serif; */
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -574,8 +575,8 @@ ol {
 
 .hero-section {
 	position: relative;
-	padding-top: 180px;
-	padding-bottom: 240px;
+	padding-top: 580px;
+	/* padding-bottom: 25vw; */
 }
 .hero-section .container {
 	position: relative;
@@ -963,6 +964,7 @@ ol {
 .about-text p {
 	color: #595960;
 	font-weight: 500;
+	font-size: large;
 }
 
 .about-text p.f-para {
@@ -3458,7 +3460,8 @@ div.elem-group {
 	  /* background-color: blue; */
 	  content: url("/img/02.jpg");
 	  height: 560px;
-	  margin-top: 0%;
+	  padding-top: 20vw;
+	  /* margin-top: 23%; */
 	}
   }
 
